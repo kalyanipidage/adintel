@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+/* NAVBAR */
+.navbar {
+  background: rgba(0,0,0,0.85);
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h2 {
+  color: white;
+  font-size: 22px;
+}
+
+.navbar a {
+  color: white;
+  margin-left: 25px;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 30px;
+}
+
+/* HEADER */
+.admin-header {
+  margin-bottom: 25px;
+}
+
+.admin-header h1 {
+  color: white;
+  font-size: 32px;
+}
+
+.admin-header p {
+  color: #ddd;
+  font-size: 16px;
+}
+
+/* GRID (BIGGER CARDS) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* STAT CARDS */
+.stat-card {
+  padding: 30px;
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.stat-card:nth-child(1) {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+.stat-card:nth-child(2) {
+  background: linear-gradient(135deg, #36d1dc, #5b86e5);
+}
+.stat-card:nth-child(3) {
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+.stat-card p {
+  font-size: 34px;
+  margin-top: 10px;
+}
+
+/* TABLE CARD (BIGGER & CLEAN) */
+.table-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 25px 0;
+  overflow-x: auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+th {
+  background: #2a5298;
+  color: white;
+  padding: 14px;
+  text-align: left;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* BUTTON (BIG + CLEAN) */
+button {
+  padding: 12px 22px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.download-btn {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+}
+
+/* FORM INPUTS (BIGGER) */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* AUTH BOX (LOGIN/SIGNUP) */
+.auth-box {
+  width: 350px;
+  margin: 120px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* DASHBOARD CARDS */
+.card {
+  background: white;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 10px;
+}

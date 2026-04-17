@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="admin-header">
+    <h1>🚀 Admin Dashboard</h1>
+    <p>Monitor users, ads, and activity</p>
+</div>
+
+<!-- STATS -->
+<div class="grid">
+    <div class="stat-card">
+        <h3>Total Users</h3>
+        <p>{{ users|length }}</p>
+    </div>
+    <div class="stat-card">
+        <h3>Total Ads</h3>
+        <p>{{ ads|length }}</p>
+    </div>
+    <div class="stat-card">
+        <h3>Total Activities</h3>
+        <p>{{ logs|length }}</p>
+    </div>
+</div>
+
+<!-- USERS -->
+<h2>👤 Users</h2>
+<div class="table-card">
+<table>
+<tr>
+    <th>ID</th>
+    <th>Username</th>
+    <th>Admin</th>
+</tr>
+
+{% for u in users %}
+<tr>
+    <td>{{ u.id }}</td>
+    <td>{{ u.username }}</td>
+    <td>{{ "Yes" if u.is_admin == 1 else "No" }}</td>
+</tr>
+{% endfor %}
+</table>
+</div>
+
+<!-- ADS -->
+<h2>📢 Ads</h2>
+<div class="table-card">
+<table>
+<tr>
+    <th>User ID</th>
+    <th>Product</th>
+    <th>Niche</th>
+</tr>
+
+{% for ad in ads %}
+<tr>
+    <td>{{ ad.user_id }}</td>
+    <td>{{ ad.product }}</td>
+    <td>{{ ad.niche }}</td>
+</tr>
+{% endfor %}
+</table>
+</div>
+
+<!-- LOGS -->
+<h2>📊 Activity Logs</h2>
+<div class="table-card">
+<table>
+<tr>
+    <th>User ID</th>
+    <th>Action</th>
+    <th>Time</th>
+</tr>
+
+{% for log in logs %}
+<tr>
+    <td>{{ log.user_id }}</td>
+    <td>{{ log.action }}</td>
+    <td>{{ log.timestamp }}</td>
+</tr>
+{% endfor %}
+</table>
+</div>
+
+<!-- DOWNLOAD -->
+<div style="margin-top:20px;">
+    <a href="/download-csv">
+        <button class="download-btn">⬇ Download CSV</button>
+    </a>
+</div>
+
+{% endblock %}
