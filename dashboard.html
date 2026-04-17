@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Welcome {{ user.username }}</h2>
+
+<div class="card">
+<form method="post" action="/generate">
+<input name="product" placeholder="Product" required>
+<input name="niche" placeholder="Niche" required>
+<input name="location" placeholder="Location" required>
+<input name="platform" placeholder="Platform" required>
+<input name="goal" placeholder="Goal" required>
+<button type="submit">Generate</button>
+</form>
+</div>
+
+<h3>Past Ads</h3>
+
+{% for ad in ads %}
+<div class="card">
+<b>{{ ad.product }}</b>
+<pre style="white-space: pre-wrap;">{{ ad.audience }}</pre>
+<pre style="white-space: pre-wrap;">{{ ad.adcopy }}</pre>
+</div>
+{% endfor %}
+
+{% endblock %}
